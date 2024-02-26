@@ -22,6 +22,8 @@ body {
     align-items: center;
     justify-content: center;
     animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 #box img {
