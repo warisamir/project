@@ -11,8 +11,8 @@ body {
 }
 
 #box {
-    width: 25vw;
-    height: 50vh;
+    width: 20vw;
+    height: 40vh;
     background-color: blueviolet;
     border-radius: 50%;
     position: absolute;
@@ -24,22 +24,36 @@ body {
     animation-delay: 0s;
 }
 
-#box i {
-    position: absolute;
-    font-size: 40px;
-    font-weight: 400;
+#box img {
+    position:relative;
+    width: 40vw;
+    object-fit: cover;
+
 }
+
 
 @keyframes move {
     from {
-        left: 10vw;
+        left: 30vw;
         rotate: 0deg;
+        top:10vh;
         background-color: blueviolet;
     }
-
+   
+    25%{
+        left:80vw;
+        top:10vh;
+        image-orientation:from-image;
+    }
+    50%{
+        left:80vw;
+        top:80vh;
+    }
     to {
-        left: 75vw;
-        rotate: 720deg;
-        background-color: chartreuse;
+        left: 10vw;
+        rotate:360deg;
+        /* motion-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); */
+        top:80vh;
+        background-color: darkgray;
     }
 }
