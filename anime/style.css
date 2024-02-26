@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#box {
+    width: 25vw;
+    height: 50vh;
+    background-color: blueviolet;
+    border-radius: 50%;
+    position: absolute;
+    animation-name: move;
+    animation-duration: 5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-delay: 0s;
+}
+
+#box i {
+    position: absolute;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+@keyframes move {
+    from {
+        left: 10vw;
+        rotate: 0deg;
+        background-color: blueviolet;
+    }
+
+    to {
+        left: 75vw;
+        rotate: 720deg;
+        background-color: chartreuse;
+    }
+}
