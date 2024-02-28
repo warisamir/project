@@ -1,0 +1,300 @@
+.App{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(218,229,245);
+  display: flex; /* Use flexbox to arrange sidebar and main page side by side */
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar{
+  height: 100vh;
+  width: 24vw;
+  background-color: white;
+  position: relative; /* Set position relative to contain absolutely positioned elements */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+.sidebar-header {
+  position: sticky; /* Make the title sticky */
+  display: flex;
+  width: 22vw;
+  top: 0; /* Stick to the top of the sidebar */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  background-color: #fff; /* Add background color */
+  padding: 10px; /* Add padding */
+  z-index: 1; /* Ensure it stays above the content */
+}
+.sidebar-content {
+  flex: 1; /* Allow the content to expand to fill remaining space */
+  padding-top: 10px; /* Adjust padding to make space for the sticky title */
+}
+.sidebar-list {
+  list-style-type: none;
+}
+.sidebar-item.selected {
+  background-color: #e0e0e0; /* Change to the desired background color */
+  border-radius: 10px; /* Make the corners round */
+
+  /* border-radius:10%; */
+}
+
+.icon {
+  width: 40px; /* Make the icon bigger */
+  height: 40px; /* Make the icon bigger */
+  border-radius: 50%;
+  color: white;
+  background-color: #ccc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.icon span {
+  font-size: 18px; /* Increase font size */
+  font-weight: bold;
+  color: #fff;
+}
+span {
+  font-size: 16px; /* Increase font size */
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 10px; /* Add padding to create space around the list items */
+  margin-bottom: 10px; /* Add margin-bottom to create space between the list items */
+
+}
+
+.sticky-button {
+  position: absolute; /* Position the button absolutely */
+  bottom: 5vh; /* Position it 20px from the bottom */
+  left: 17vw; /* Position it 20px from the right */
+  background-color: rgb(22,0,139); /* Set background color to blue */
+  width: 40px; /* Set width */
+  height: 40px; /* Set height */
+  padding: 10px;
+  border-radius: 50%; /* Make the button round */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; /* Change cursor to pointer on hover */
+  z-index: 1; /* Ensure it stays above the sidebar content */
+  color: white;
+  font-size: 40px;
+}
+
+.sticky-button:hover {
+  background-color: darkblue; /* Change background color on hover */
+  width: 45px; /* Set width */
+  height: 45px; /* Set height */
+
+}
+
+
+.main-page{
+  background-color: rgb(0,31,139);
+  width: 76vw;
+}
+
+.header{
+  background: rgb(0,31,139);
+  width: 100%;
+  height: 15vh;
+  display: flex; /* Use flexbox to arrange sidebar and main page side by side */
+}
+.header-title{
+  color: white;
+  margin-top: 4vh;
+  margin-left: 1vw;
+}
+.main-icon {
+  width: 60px; /* Make the icon bigger */
+  height: 60px; /* Make the icon bigger */
+  color: white;
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  margin-left: 2vw;
+  margin-top: 2vh;
+}
+
+.content{
+  height: 65vh;
+  background-color: rgb(217,228,244);
+  /* display: flex; */
+  justify-content: center;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.message-box{
+  height: 14vh;
+  padding: 20px;
+  background-color: rgb(0,31,139);
+}
+
+.input-box{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px; /* Make the corners round */
+
+}
+
+.send-button{
+  position: absolute;
+  bottom: 20px; /* Adjust as needed */
+  right: 25px; /* Adjust as needed */
+  z-index: 1; /* Ensure button appears above input */
+  height: 40px;
+  width: 40px;
+  border-radius: 10%;
+}
+
+/* AddGroup.css */
+
+.overlay {
+  position: fixed; /* Position the overlay */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  background-color: rgba(120, 120, 123, 0.5); /* Semi-transparent blue color */
+  z-index: 10; /* Ensure the overlay appears above other elements */
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  border-radius: 10px;
+  z-index: 20; /* Ensure the popup appears above the overlay */
+}
+
+/* Hide the overlay when the popup is closed */
+.overlay-hidden {
+  display: none;
+}
+
+
+.color-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.color-option.selected {
+  border: 2px solid black;
+}
+
+
+.note-item {
+  background-color: white;
+  width: 80%;
+  margin-left: 12vh;
+  margin-right: 12vh;
+  margin-bottom: 10px;
+  position: relative;
+  padding: auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+  border-radius: 10px; /* Make the corners round */
+
+}
+
+
+.note-content{
+  margin-top: 2vh;
+  margin-left: 1vw;
+}
+.note-date{
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+}
+
+.note-time{
+  position: absolute;
+  bottom: 0;
+  right: 1vw;
+}
+
+.color-options{
+  display: flex;
+}
+
+.popup-button{
+  position: absolute;
+  bottom: 1vh;
+  right: 1vw;
+  background-color: rgb(0,31,139);
+  color: white;
+  border: none;
+  outline: none; 
+  border-radius: 5px;
+}
+
+.popup-input{
+  margin-left: 2vw;
+  border-radius: 10px;
+}
+.blur {
+  filter: blur(5px);
+}
+
+.default-page{
+  background-color: rgb(218,229,245);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.default-content {
+  text-align: center;
+}
+
+.send-button{
+  border: none;
+  outline: none; /* This removes the focus border when the button is clicked */
+
+}
+.send-image{
+  width: 20px;
+}
+/* Add this CSS to your stylesheet */
+
+/* Define scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar handle */
+  border-radius: 5px; /* Border radius of the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar handle on hover */
+}
